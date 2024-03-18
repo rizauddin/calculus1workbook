@@ -1,4 +1,7 @@
 \documentclass[12pt,a4paper,oneside]{report}
+%%%%%
+% If needed, enable scheme of works and past years!!!!
+%%%%%
 
 %Options: Sonny, Lenny, Glenn, Conny, Rejne, Bjarne, Bjornstrup
 %\usepackage[Lenny]{fncychap}
@@ -79,10 +82,17 @@ https://www.rizauddin.com
 
 \maketitle
 
-% scheme of works
-%\includepdf[pages={1-},pagecommand={}]{pdf/MAT183-20234-SOW}
-\includepdf[scale=0.8,pages={1},pagecommand={\chapter*{Scheme of Works}\addcontentsline{toc}{chapter}{Scheme of Works}}]{pdf/MAT183-20242-SOW}
-\includepdf[scale=0.8,pages={2-},pagecommand={}]{pdf/MAT183-20242-SOW}
+%-------------
+% To include scheme of works or not
+%-------------
+\includesowtrue % Include scheme of works
+\includesowfalse % does not include scheme of works
+\ifincludesow
+	%\includepdf[pages={1-},pagecommand={}]{pdf/MAT183-20234-SOW}
+    \includepdf[scale=0.8,pages={1},pagecommand={\chapter*{Scheme of Works}	\addcontentsline{toc}{chapter}{Scheme of Works}}]{sow/MAT183-20242-SOW}
+    \includepdf[scale=0.8,pages={2-},pagecommand={}]{sow/MAT183-20242-SOW}
+\fi
+%-------------
 
 % preface
 \chapter*{Preface}
