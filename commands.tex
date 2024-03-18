@@ -1,0 +1,128 @@
+%----------------COMMANDS-------------------------------------------%%
+\newcommand\blank{\underline{\hspace{2cm}}} % Gives a blank 
+\newcounter{prob} % A new counter for current problem number
+\setcounter{prob}{1} % Start the counter at the value 1
+\newcommand\itm{
+	\fbox{\textbf{\theprob}} \refstepcounter{prob}
+} % Calls problem number
+\newcommand{\problemans}[2]{
+	\noindent
+	\begin{minipage}[t]{\textwidth}\itm #1 \end{minipage}  
+	\rotatebox{180}{\scriptsize{Ans: #2}}
+	\vfill
+} % An environment for a problem statement on or more lines
+\newcommand{\problem}[1]{
+	\noindent
+	\begin{minipage}[t]{\textwidth}\itm #1 \end{minipage}  
+	\vfill
+} % An environment for a problem statement on or more lines
+\newcommand{\pairofprobsans}[4]{
+	\noindent
+	\begin{minipage}[t]{0.5\textwidth}\itm #1 \end{minipage}
+	\begin{minipage}[t]{0.5\textwidth}\itm #3 \end{minipage} 
+	\begin{minipage}[t]{\textwidth}\rotatebox[origin=c]{180}{\parbox{\textwidth}{\scriptsize{\hfill Ans: #4\hfill Ans: #2}}}\end{minipage}
+	
+	\vfill
+} % Fits two problems on a line
+\newcommand{\pairofprobs}[2]{
+	\noindent
+	\begin{minipage}[t]{0.5\textwidth}\itm #1 \end{minipage} 
+	\begin{minipage}[t]{0.45\textwidth}\itm #2 \end{minipage} 
+	\vfill
+} % Fits two problems on a line
+\newcommand{\threeprobs}[3]{
+	\noindent
+	\begin{minipage}[t]{0.31\textwidth}\itm #1 \end{minipage} \hfill
+	\begin{minipage}[t]{0.31\textwidth}\itm #2 \end{minipage} \hfill 
+	\begin{minipage}[t]{0.31\textwidth}\itm #3 \end{minipage}
+	\vfill
+} % Fits three problems on a line
+\newcounter{choice} % Counter for multiple choice problems 
+\setcounter{choice}{1} % Start the counter at the value 1
+\newcommand\achoice{
+	(\alph{choice}) \stepcounter{choice}
+} % Generates letter for multiple choice option
+\newcommand{\answers}[5]{\vspace*{-7mm} 
+	\begin{tabular}{l@{\hspace{1mm}}p{0.9\textwidth}}
+		\achoice & #1 \\ \achoice & #2 \\ \achoice & #3 \\ 
+		\achoice & #4 \\ \achoice & #5 \end{tabular}
+	\setcounter{choice}{1}
+} % Makes multiple-choice options 
+%---------------------------------
+
+
+%---------------------------------
+% Make a note with box
+\usepackage[most]{tcolorbox}
+
+\newtcolorbox{myframe}[1][]{
+	enhanced,
+	arc=0pt,
+	outer arc=0pt,
+	colback=white,
+	boxrule=0.8pt,
+	#1
+}
+
+% example
+%\begin{myframe}[width=30em,top=20pt,bottom=20pt,left=20pt,right=20pt,arc=10pt,auto outer arc]
+%	I certify that the work presented in the dissertation is my own unless referenced.
+%\end{myframe}
+%---------------------------------
+
+
+
+
+%---------------------------------
+% Reset the counter for prob in a new section
+\newcommand{\makenewpage}{\newpage\setcounter{prob}{1}}
+%---------------------------------
+
+%----
+% Make mainmatter frontmatter work in report
+\makeatletter
+
+\newcommand\frontmatter{%
+	\cleardoublepage
+	%\@mainmatterfalse
+	\pagenumbering{roman}}
+
+\newcommand\mainmatter{%
+	\cleardoublepage
+	% \@mainmattertrue
+	\pagenumbering{arabic}}
+
+\newcommand\backmatter{%
+	\if@openright
+	\cleardoublepage
+	\else
+	\clearpage
+	\fi
+	% \@mainmatterfalse
+}
+
+\makeatother
+%----
+
+%--------------
+% Option to include or not for past years questions.
+%--------------
+\newif\ifincludepastyears
+%--------------
+
+%--------------
+% Define a new command for QR codes with captions
+% \qrfigure{<image path>}{<caption text>}
+%-------------
+\newcommand{\qrfigure}[2]{
+  \begin{figure}[h!]
+    \hfill % Pushes the figure to the right
+    \begin{minipage}{0.2\textwidth} % Adjust the width to fit the QR image
+      \centering
+      \begin{overpic}[width=\textwidth]{#1}
+        % Position the caption text within the QR code's padding at the bottom
+        \put(14,1){\color{black}\footnotesize #2}
+      \end{overpic}
+    \end{minipage}
+  \end{figure}
+}

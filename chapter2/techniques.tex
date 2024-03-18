@@ -1,0 +1,38 @@
+% !TeX root = ../main.tex
+\section{Techniques of Differentiation}
+
+\begin{myframe}[arc=10pt,auto outer arc]
+	\begin{enumerate}
+		\item Power Rule: $\left( x^n \right)' = nx^{n-1};  n\in\Re$
+		\item Product Rule: $\left[u\left(x\right)v\left(x\right)\right]' = v(x) u'(x) + u(x) v'(x)$
+		\item Quotient Rule: $\displaystyle\left[\frac{u\left(x\right)}{v\left(x\right)}\right]' = \frac{v(x) u'(x) - u(x) v'(x) }{ v(x)^2}$
+	\end{enumerate}
+\end{myframe}
+
+\noindent Find the derivative $f'\left(x\right)$.
+
+\pairofprobsans%
+{$\displaystyle f\left(x\right) = 3x^8 - 2x^5 + 6x + 1$}{$24x^7 - 10x^4 + 6$}%
+{$\displaystyle f\left(x\right) = \left(4x^2 - 1\right)\left(7x^3 + x\right)$}{$140x^4 - 9x^2 - 1$}
+
+\pairofprobsans%
+{$\displaystyle f\left(x\right) = \frac{x^2 - 1}{x^4 + 1}$}{$\displaystyle \frac{-2x^5 + 4x^3 + 2x}{(x^4+1)^2}$}%
+{$\displaystyle f\left(x\right) = x^2 \tan{x}$}{$\displaystyle (\tan{x})(2x) + x^2 \sec^2{x}$}
+
+\newpage
+\begin{myframe}[arc=10pt,auto outer arc]
+	\begin{enumerate}
+		\item Derivative of logarithmic function: $\displaystyle \left[\log_b(u(x))\right]' = \frac{u'(x)}{u(x) \ln{b}}$
+		\item Derivative of natural logarithmic function: $\displaystyle \left[\ln(u(x))\right]' = \frac{u'(x)}{u(x)}$
+		\item Derivative of exponential function: $\displaystyle \left[b^{u(x)}\right]' = b^{u(x)} (\ln{b} )u'(x)$
+		\item Derivative of exponential function: $\displaystyle \left[e^{u(x)}\right]' = b^{u(x)} u'(x)$
+	\end{enumerate}
+\end{myframe}
+
+\pairofprobsans%
+{$\displaystyle f\left(x\right) = \log_2{(x^2+1})$}{$\displaystyle \frac{2x}{(x^2+ 1) \ln{2}}$}%
+{$\displaystyle f\left(x\right) = \ln{(x^2 + 1)}$}{$\displaystyle \frac{2x}{x^2+ 1}$}
+
+\pairofprobsans%
+{$\displaystyle f\left(x\right) = 2^{\sin{(x)}}$}{$2^{\sin{x}}(\cos{(x)})\ln{2}$}%
+{$\displaystyle f\left(x\right) = e^{\cos{x}}$}{$\displaystyle -e^{\cos{x}}\sin{x}$}

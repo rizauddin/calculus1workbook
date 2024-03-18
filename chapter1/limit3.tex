@@ -1,0 +1,124 @@
+% !TEX root = ../main.tex
+
+\section{Computing Limits at $\infty$}
+
+\subsection{Odd vs Even Positive Integer Powers}
+
+Evaluate the following limits.
+
+\pairofprobsans
+{$\displaystyle \lim_{x\rightarrow2} x$}{2}
+{$\displaystyle \lim_{x\rightarrow+\infty} x$}{$+\infty$}
+
+\pairofprobsans
+{$\displaystyle  \lim_{x\rightarrow-2} x$}{$-2$}
+{$\displaystyle \lim_{x\rightarrow-\infty} x$}{$-\infty$}
+
+\pairofprobsans
+{$\displaystyle  \lim_{x\rightarrow2} 3$}{$3$}
+{$\displaystyle \lim_{x\rightarrow+\infty} 3$}{$3$}
+
+\pairofprobsans
+{$\displaystyle \lim_{x\rightarrow-2} x^3$}{$-8$}
+{$\displaystyle \lim_{x\rightarrow-\infty} x^3$}{$-\infty$}
+
+\pairofprobsans
+{$\displaystyle \lim_{x\rightarrow-2} x^2$}{$+4$}
+{$\displaystyle \lim_{x\rightarrow-\infty} x^2$}{$+\infty$}
+
+\pairofprobsans
+{$\displaystyle \lim_{x\rightarrow-2} (-x^2)$}{$-4$}
+{$\displaystyle \lim_{x\rightarrow-\infty} (-x^2)$}{$-\infty$}
+
+\pairofprobsans
+{$\displaystyle \lim_{x\rightarrow-2} (-x^3)$}{$+8$}
+{$\displaystyle \lim_{x\rightarrow-\infty} (-x^3)$}{$+\infty$}
+
+\problemans
+{$\displaystyle \lim_{x\rightarrow+\infty} (-3x)$}{$-\infty$}
+
+%%%% GUIDES
+\qrfigure{chapter1/qr/Limits-at-Infinity}{Scan for guides}
+
+\makenewpage\subsection{Polynomials}
+
+\begin{myframe}[arc=10pt,auto outer arc]
+	Limits at $\infty$ for polynomials matches limits at $\infty$ of its highest degree term.
+\end{myframe}
+
+\noindent Evaluate the following limits.
+
+\problemans%
+{$\displaystyle \lim_{x\rightarrow+\infty} (3x^4 + 2x + 3)$}{$+\infty$}
+
+\problemans%
+{$\displaystyle \lim_{x\rightarrow+\infty} (-3x^4 + 2x + 3)$}{$-\infty$}
+
+\problemans%
+{$\displaystyle \lim_{x\rightarrow-\infty} (3x^4 + 2x + 3)$}{$+\infty$}
+
+\problemans%
+{$\displaystyle \lim_{x\rightarrow-\infty} (-3x^4 + 2x + 3)$}{$-\infty$}
+
+\problemans%
+{$\displaystyle \lim_{x\rightarrow-\infty} (2x^3 + 2x + 3)$}{$-\infty$}
+
+\problemans%
+{$\displaystyle \lim_{x\rightarrow-\infty} (-2x^3 + 2x + 3)$}{$+\infty$}
+
+%%%% GUIDES
+\qrfigure{chapter1/qr/Limits-at-Infinity-Polynomials}{Scan for guides}
+
+\makenewpage\subsection{Rational Functions}
+\begin{myframe}[arc=10pt,auto outer arc]
+	\begin{enumerate}
+		\item Divide the numerator and denominator by the highest power $x$ that occurs in the denominator.
+		\item $\displaystyle \lim_{x\rightarrow+\infty} \frac{1}{x} = \lim_{x\rightarrow-\infty} \frac{1}{x} = 0$
+	\end{enumerate}
+\end{myframe}
+
+\noindent Evaluate the following limits.
+
+\problemans%
+{$\displaystyle \lim_{x\rightarrow+\infty} \frac{2x + 4}{5x - 3}$}{$\frac{2}{5}$}
+
+\problemans%
+{$\displaystyle \lim_{x\rightarrow-\infty} \frac{2x^2 + 4}{5x - 3}$}{$-\infty$}
+
+%%%% GUIDES
+\qrfigure{chapter1/qr/Limits-at-Infinity-Rational}{Scan for guides}
+
+\makenewpage\subsection{Radical Functions}
+\begin{myframe}[arc=10pt,auto outer arc]
+	\begin{enumerate}
+		\item Find the limit first, and subsequently, calculate the square root..
+		\item $\displaystyle \lim_{x\rightarrow+\infty} \frac{1}{x} = \lim_{x\rightarrow-\infty} \frac{1}{x} = 0$
+	\end{enumerate}
+\end{myframe}
+
+\noindent Evaluate the following limits.
+
+\problemans%
+{$\displaystyle \lim_{x\rightarrow+\infty} \sqrt{\frac{2x + 4}{5x - 3}}$}{$\sqrt{\frac{2}{5}}$}
+
+\problemans%
+{$\displaystyle \lim_{x\rightarrow+\infty} \frac{\sqrt{x^2 + 1}}{2x - 3}$}{$\frac{1}{2}$}
+
+\problemans%
+{$\displaystyle \lim_{x\rightarrow-\infty} \frac{\sqrt{x^2 + 1}}{2x - 3}$}{$-\frac{1}{2}$}
+
+%%%% GUIDES
+\qrfigure{chapter1/qr/Limits-at-Infinity-Radicals}{Scan for guides}
+
+\makenewpage\subsection{Indeterminate Form of Type $\infty - \infty$}
+
+\noindent Evaluate the following limits.
+
+\problemans%
+{$\displaystyle \lim_{x\rightarrow+\infty} \left(\sqrt{x^2-3x} - x\right)$}{$-\frac{3}{2}$}
+
+\problemans%
+{$\displaystyle \lim_{x\rightarrow+\infty} \left(\sqrt{x^2+3} - x\right)$}{$0$}
+
+%%%% GUIDES
+\qrfigure{chapter1/qr/Limits-Indeterminate-Form-of-Type-Infinity-Infinity}{Scan for guides}

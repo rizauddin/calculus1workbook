@@ -1,0 +1,157 @@
+\documentclass[12pt,a4paper,oneside]{report}
+
+%Options: Sonny, Lenny, Glenn, Conny, Rejne, Bjarne, Bjornstrup
+%\usepackage[Lenny]{fncychap}
+\usepackage{graphicx}
+\usepackage{float}
+%\usepackage[top=2cm, bottom=2cm, left=1in, right=2cm]{geometry}
+\usepackage[margin=1in]{geometry}
+\usepackage[T1]{fontenc}
+\usepackage[utf8]{inputenc}
+\usepackage{mwe}
+\usepackage{fancyhdr}
+
+\usepackage{amsthm}
+\usepackage{amsfonts}
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{fourier}
+
+% Make TOC clickable link
+\usepackage{hyperref}
+\hypersetup{
+    colorlinks,
+    citecolor=black,
+    filecolor=black,
+    linkcolor=black,
+    urlcolor=black
+}
+
+\usepackage{multicol}
+\usepackage{caption}
+\usepackage[percent]{overpic}
+\usepackage{xcolor} % For setting text color
+
+% Add section title at the top of the page
+\pagestyle{fancy}
+\fancyhf{}
+\fancyhead[L]{\rightmark}
+\fancyhead[R]{\thepage}
+\renewcommand{\headrulewidth}{0pt}
+
+% To append pdf pages
+\usepackage{pdfpages}
+
+% line between column
+\setlength{\columnseprule}{0.4pt}
+
+%\titleformat{\chapter}[hang]{\Huge\bfseries}{\thechapter\hsp\textcolor{gray75}{|}\hsp}{0pt}{\Huge\bfseries}
+
+\input{commands}
+
+% format chapter title
+\usepackage{titlesec, color}
+\definecolor{gray75}{gray}{0.75}
+\newcommand{\hsp}{\hspace{20pt}}
+\titleformat{\chapter}[hang]{\Huge\bfseries}{\thechapter\hsp\textcolor{gray75}{|}\hsp}{0pt}{\Huge\bfseries}
+\titlespacing*{\chapter}{0pt}{-50pt}{20pt}
+
+% format section title
+\titleformat{\section}{\normalfont\Large\bfseries}{\thesection}{1em}{}[{\titlerule[0.8pt]}]
+
+% Disable indent on a new paragraph.
+\parindent 0px
+
+
+\title{Calculus I Workbook}
+\author{Profesor Madya Ts. Dr. Rizauddin Saian\\
+https://www.rizauddin.com
+}
+\date{2024}
+
+\begin{document}
+
+%front page
+\includepdf[fitpaper=true, pages=-]{pdf/front2024}
+%\includepdf[fitpaper=true, pages=-]{pdf/front}
+
+\frontmatter
+
+\maketitle
+
+% scheme of works
+%\includepdf[pages={1-},pagecommand={}]{pdf/MAT183-20234-SOW}
+\includepdf[scale=0.8,pages={1},pagecommand={\chapter*{Scheme of Works}\addcontentsline{toc}{chapter}{Scheme of Works}}]{pdf/MAT183-20242-SOW}
+\includepdf[scale=0.8,pages={2-},pagecommand={}]{pdf/MAT183-20242-SOW}
+
+% preface
+\chapter*{Preface}
+\addcontentsline{toc}{chapter}{Preface}
+\input{preface}
+
+% acknowledgement
+\chapter*{Acknowledgements}
+\addcontentsline{toc}{chapter}{Acknowledgements}
+\input{acknowledgement}
+
+% Table of contents
+\tableofcontents
+
+\mainmatter
+%Chapter 1
+\chapter{Functions, Limits and Continuity}
+\input{chapter1/domain}\makenewpage
+\input{chapter1/limits}\makenewpage
+\input{chapter1/limit1}\makenewpage
+\input{chapter1/limit2}\makenewpage
+\input{chapter1/limit3}\makenewpage
+\input{chapter1/limit4}\makenewpage
+\input{chapter1/continuity}\makenewpage
+
+%Chapter 2
+\chapter{Differentiation}
+\input{chapter2/definition}\makenewpage
+\input{chapter2/techniques}\makenewpage
+\input{chapter2/chainrule}\makenewpage
+\input{chapter2/implicit}\makenewpage
+\input{chapter2/tangent}\makenewpage
+\input{chapter2/approx}\makenewpage
+
+%Chapter 3
+\chapter{Applications of Differentiation}
+\input{chapter3/related}\makenewpage
+\input{chapter3/analysis1}\makenewpage
+\input{chapter3/analysis2}\makenewpage  
+\input{chapter3/meanvaluetm}\makenewpage
+\input{chapter3/maxmin}\makenewpage
+
+%Chapter 4
+\chapter{Integration}
+\input{chapter4/indefinite}\makenewpage
+\input{chapter4/substitution}\makenewpage
+\input{chapter4/definite}\makenewpage
+\input{chapter4/substitutiondefinite}\makenewpage
+\input{chapter4/fundamental2}\makenewpage
+\input{chapter4/meanvaluetmintegral}\makenewpage
+
+%Chapter 5
+\chapter{Applications of Integration}
+\input{chapter5/area}\makenewpage
+\input{chapter5/disc}\makenewpage
+\input{chapter5/shell}\makenewpage
+\input{chapter5/discshell}\makenewpage
+
+\backmatter
+\appendix
+%-------------
+% To include past years or not
+%-------------
+\includepastyearstrue % Include past years
+\includepastyearsfalse % does not include past years
+\ifincludepastyears
+  \input{past-years/past-years}
+\fi
+\input{formulas/formulas}
+\input{cheat-sheets/cheat-sheets}
+
+\end{document}

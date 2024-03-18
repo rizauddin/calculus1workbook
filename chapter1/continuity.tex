@@ -1,0 +1,33 @@
+% !TEX root = ../main.tex
+\section{Continuity}
+
+\begin{myframe}[arc=10pt,auto outer arc]
+$f$ is continuous at $x=a$ if:
+\begin{enumerate}
+	\item $f\left(a\right)$ is defined.
+	\item $\displaystyle \lim_{x\rightarrow a} f\left(x\right) \textrm{exists} \Leftrightarrow \lim_{x\rightarrow a^+} f\left(x\right) = \lim_{x\rightarrow a^-} f\left(x\right)$.
+	\item $\displaystyle \lim_{x\rightarrow a} f\left(x\right) = f\left(a\right) = L$.
+\end{enumerate}
+\end{myframe}
+
+\problemans{Determine whether the function $\displaystyle f\left(x\right)=\frac{4x+12}{x^2-9}$ is continuous at $x=0$.}{continuous}
+
+\problemans{Determine whether the function $\displaystyle f\left(x\right)=\frac{4x+1}{x^2-9}$ is continuous at $x=-3$.}{discontinuous}
+
+
+\newpage
+\problemans{Determine whether the following function is continuous at $x=3$. \\
+	$ f\left(x\right) =
+	\begin{cases} 
+		2x^2 - 5 & x< 3 \\
+		4x + 1 & x\geq 3 
+	\end{cases}$}{continuous}
+
+\problemans{Find the value(s) of $k$ if $f$ is continuous at $x=1$. \\ $ f\left(x\right) =
+	\begin{cases} 
+		x^2 - 2 & x < 1 \\
+		kx - 4 & x \geq 1 
+	\end{cases}$}{3}
+
+%%%% GUIDES
+\qrfigure{chapter1/qr/Continuity.png}{Scan for guides}

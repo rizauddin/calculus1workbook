@@ -1,0 +1,21 @@
+% !TEX root = ../main.tex
+\section{The Second Fundamental Theorem of Calculus}
+ 
+\begin{myframe}[arc=10pt,auto outer arc]
+If $f$ is continuous on interval $I$, $A$ is any number in $I$, $F$ is an antiderivative of $F$ on $I$.
+	\begin{enumerate}
+\item $\displaystyle F(x) = \int_a^x f(t) \,dt \implies F'(x) = \frac{d}{dx} \int_a^x f(t) \,dt = f(x) $
+\item $\displaystyle F(x) = \int_a^{g(x)} f(t) \,dt \implies F'(x) = \frac{d}{dx} \int_a^{g(x)} f(t) \,dt = f(g(x)) g'(x) $
+\end{enumerate}
+\end{myframe}
+
+\pairofprobsans%
+{$\displaystyle \frac{d}{dx} \int_1^x t^3 \,dt $}{$\displaystyle x^3$}%
+{$\displaystyle \frac{d}{dx} \int_1^x \frac{\sin{(t)}}{t} \,dt $}{$\displaystyle \frac{\sin{(x)}}{x}$}%
+
+\problemans%
+{$\displaystyle \frac{d}{dx} \int_2^{3x^2} 4u \,du $}{$\displaystyle 72x^3$}%
+
+%%%% GUIDES
+\qrfigure{chapter4/qr/The-Second-Fundamental-Theorem-of-Calculus}{Scan for guides}
+

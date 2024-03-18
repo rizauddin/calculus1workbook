@@ -1,0 +1,93 @@
+%\includepdf[pages={1},pagecommand={\section{Important Formulas I}}]{pdf/cheat/Formulas}
+%\includepdf[pages={2},pagecommand={\section{Important Formulas II}}]{pdf/cheat/Formulas}
+
+% !TEX root = ../main.tex
+\chapter{Important Formulas}
+
+\section{Derivatives and Integrals}
+
+\begin{multicols}{2}
+\noindent
+\textbf{Derivatives:}
+\begin{align*}
+&\frac{d}{dx}c = 0 \\
+&\frac{d}{dx}x^n = nx^{n-1} \\
+&\frac{d}{dx}e^x = e^x \\
+&\frac{d}{dx}a^x = \ln(a) \cdot a^x \\
+&\frac{d}{dx}\ln(x) = \frac{1}{x} \\
+&\frac{d}{dx}\log_a(x) = \frac{1}{x \ln(a)} \\
+&\frac{d}{dx}\sin(x) = \cos(x) \\
+&\frac{d}{dx}\cos(x) = -\sin(x) \\
+&\frac{d}{dx}\tan(x) = \sec^2(x) \\
+&\frac{d}{dx}\csc(x) = -\csc(x)\cot(x) \\
+&\frac{d}{dx}\sec(x) = \sec(x)\tan(x) \\
+&\frac{d}{dx}\cot(x) = -\csc^2(x) \\
+&\frac{d}{dx}e^{u(x)} = u'(x)e^{u(x)} \\
+&\frac{d}{dx}\ln|u(x)| = \frac{u'(x)}{u(x)}
+\end{align*}
+
+\columnbreak
+
+\noindent
+\textbf{Integrals:}
+\begin{align*}
+&\int 0\,dx = C \\
+&\int x^n\,dx = \frac{x^{n+1}}{n+1} + C, \quad n \neq -1 \\
+&\int e^x\,dx = e^x + C \\
+&\int a^x\,dx = \frac{a^x}{\ln(a)} + C \\
+&\int \frac{1}{x}\,dx = \ln|x| + C \\
+&\int \frac{1}{x \ln(a)}\,dx = \log_a|x| + C \\
+&\int \cos(x)\,dx = \sin(x) + C \\
+&\int \sin(x)\,dx = -\cos(x) + C \\
+&\int \sec^2(x)\,dx = \tan(x) + C \\
+&\int \csc^2(x)\,dx = -\cot(x) + C \\
+&\int \sec(x)\tan(x)\,dx = \sec(x) + C \\
+&\int \csc(x)\cot(x)\,dx = -\csc(x) + C \\
+&\int e^{u(x)}\,dx = \int e^{u(x)}u'(x)\,dx \quad \text{(use substitution)} \\
+&\int \frac{1}{u(x)}u'(x)\,dx = \ln|u(x)| + C
+\end{align*}
+\end{multicols}
+
+\newpage
+\section{Trigonometric Identities, Index (Exponent) Rules and Logarithmic Properties}
+\begin{multicols}{2}
+\noindent
+
+\noindent
+\textbf{Index (Exponent) Rules:}
+\begin{align*}
+&a^m \cdot a^n = a^{m+n} \\
+&a^m / a^n = a^{m-n} \\
+&(a^m)^n = a^{mn} \\
+&a^0 = 1 \quad (a \neq 0) \\
+&a^{-n} = 1/a^n
+\end{align*}
+
+\noindent
+\textbf{Logarithmic Properties:}
+\begin{align*}
+&\log_a(xy) = \log_a(x) + \log_a(y) \\
+&\log_a\left(\frac{x}{y}\right) = \log_a(x) - \log_a(y) \\
+&\log_a(x^n) = n\log_a(x) \\
+&\log_a(a) = 1 \\
+&\log_a(1) = 0
+\end{align*}
+
+
+\textbf{Trigonometric Identities:}
+\begin{align*}
+&\sin^2(x) + \cos^2(x) = 1 \\
+&1 + \tan^2(x) = \sec^2(x) \\
+&1 + \cot^2(x) = \csc^2(x) \\
+&\sin(2x) = 2\sin(x)\cos(x) \\
+&\cos(2x) = \cos^2(x) - \sin^2(x) \\
+&\tan(2x) = \frac{2\tan(x)}{1 - \tan^2(x)}\\
+&\sin(x + y) = \sin(x)\cos(y) + \cos(x)\sin(y) \\
+&\sin(x - y) = \sin(x)\cos(y) - \cos(x)\sin(y) \\
+&\cos(x + y) = \cos(x)\cos(y) - \sin(x)\sin(y) \\
+&\cos(x - y) = \cos(x)\cos(y) + \sin(x)\sin(y) \\
+&\tan(x + y) = \frac{\tan(x) + \tan(y)}{1 - \tan(x)\tan(y)} \\
+&\tan(x - y) = \frac{\tan(x) - \tan(y)}{1 + \tan(x)\tan(y)}
+\end{align*}
+
+\end{multicols}

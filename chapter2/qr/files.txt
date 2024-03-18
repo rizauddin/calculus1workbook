@@ -1,0 +1,6 @@
+Definition-of-Derivative:https://youtu.be/e7-VzIDD55E
+Chain-Rule:https://youtu.be/uv7oXwDQu38
+Implicit-Differentiation:https://youtu.be/yy2Kvftg72k
+Equation-of-Tangent-Line:https://youtu.be/6ipZtHYsts4
+Local-Linear-Approximations-and-Differentials:https://youtu.be/3SRzaW1Ehh0
+The-Mean-Value-Theorem-for-Integrals:https://youtu.be/PC8WcOoyTP4

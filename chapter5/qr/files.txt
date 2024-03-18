@@ -1,0 +1,6 @@
+Area-Between-Two-Curves:https://youtu.be/a7weKV6T0TA
+Method-of-Disks-Washers-Perpendicular-to-the-x-axis:https://youtu.be/rR7bjP9M2l8
+Method-of-Disks-Washers-Perpendicular-to-the-y-axis:https://youtu.be/MXvopfi0CQg
+Volumes-by-Cylindrical-Shells-revolved-about-the-y-axis:https://youtu.be/Jtgxz0ElneQ
+Volumes-by-Cylindrical-Shells-revolved-about-the-x-axis:https://youtu.be/qAIpEild1KI
+Volumes-by-Disk-Washer-vs-Cylindrical-Shells:https://youtu.be/8l-4JzTjJZA
