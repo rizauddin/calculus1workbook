@@ -31,7 +31,7 @@ To ensure a welcoming and respectful environment for all contributors, please fo
 ## License
 This project is licensed under the Creative Commons Attribution-NoDerivatives (CC BY-ND), which allows for redistribution, commercial and non-commercial, as long as the work is passed along unchanged and in whole, with credit to us.
 
-This work is licensed under a Creative Commons Attribution-NonCommercial-NoDerivatives 4.0 International For more information, see [LICENSE](LICENSE) in this repository.
+This work is licensed under a Creative Commons Attribution-NonCommercial-NoDerivatives 4.0 International For more information, see [LICENSE.md](LICENSE.md) in this repository.
 
 ## Contact
 If you have any questions or would like to discuss your contributions further, please don't hesitate to contact us at https://www.rizauddin.com.
