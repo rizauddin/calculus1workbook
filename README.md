@@ -15,7 +15,7 @@ Contributions are warmly welcomed and greatly appreciated! Here's how you can he
    - Commit and push your changes.
    - Submit a pull request.
 
-Please ensure your contributions adhere to our LaTeX style and formatting guidelines, which can be found in the CONTRIBUTING.md file.
+Please ensure your contributions adhere to our LaTeX style and formatting guidelines, which can be found in the [CONTRIBUTING.md](CONTRIBUTING.md) file.
 
 ## Setup
 To set up the project locally:
@@ -23,10 +23,10 @@ To set up the project locally:
 2. Clone the repository.
 3. Compile the LaTeX document to see the workbook in PDF format.
 
-For detailed setup instructions, please refer to SETUP.md.
+For detailed setup instructions, please refer to [SETUP.md](SETUP.md).
 
 ## Code of Conduct
-To ensure a welcoming and respectful environment for all contributors, please follow our Code of Conduct, available in the CODE_OF_CONDUCT.md file.
+To ensure a welcoming and respectful environment for all contributors, please follow our Code of Conduct, available in the [CODE_OF_CONDUCT.md](CODE_OF_CONDUCT.md) file.
 
 ## License
 This project is licensed under the Creative Commons Attribution-NoDerivatives (CC BY-ND), which allows for redistribution, commercial and non-commercial, as long as the work is passed along unchanged and in whole, with credit to us.
