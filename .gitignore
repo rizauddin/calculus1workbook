@@ -1,6 +1,12 @@
+## MacOS system files
+.DS_Store
+
 ## Past Years Questions
 pdf/pastyear/
 past-years/
+
+## ctags
+tags
 
 ## Scheme of works
 sow/
