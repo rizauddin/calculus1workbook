@@ -109,7 +109,12 @@
 % 1. past years questions.
 % 2. scheme of works
 %--------------
-\newif\ifincludepastyears
+\newif\ifincludeMATOneEightThree
+\newif\ifincludeMATFourTwoOne
+\includeMATOneEightThreefalse
+\includeMATFourTwoOnefalse
+%\includeMATFourTwoOnefalse
+%\newif\ifincludepastyears
 \newif\ifincludesow
 %--------------
 
@@ -129,3 +134,34 @@
     \end{minipage}
   \end{figure}
 }
+
+%-------------
+% Add past year questions
+%-------------
+\newcommand{\pastpaper}[4]{%
+  \includepdf[
+    pages=1,
+    scale=#1,
+    pagecommand={#2}
+  ]{#3}%
+  \includepdf[
+    pages={#4},
+    pagecommand={}
+  ]{#3}%
+}
+
+%\newcommand{\pastpaper}[3]{%
+%  \includepdf[
+%    pages=1,
+%    scale=#1,
+%    pagecommand={%
+%      #2%
+%      \thispagestyle{empty}%
+%    }
+%  ]{#3}%
+%  \includepdf[
+%    pages=2-,
+%    pagecommand={}
+%  ]{#3}%
+%}
+

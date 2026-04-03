@@ -20,6 +20,14 @@
 \usepackage{amssymb}
 \usepackage{amsmath}
 \usepackage{fourier}
+\usepackage{pdflscape}
+\usepackage{adjustbox}
+\usepackage{tabularx}
+\usepackage{ltablex}
+\usepackage{tikz}
+\usepackage{pgfplots}
+\pgfplotsset{compat=1.18}
+\usepackage{eso-pic}
 
 % Make TOC clickable link
 \usepackage{hyperref}
@@ -56,15 +64,23 @@
 %-------------
 % To include past years or not
 %-------------
-%\includepastyearstrue % Include past years
-%\includepastyearsfalse % does not include past years
-%----
+%\includeMATOneEightThreetrue % MAT183 past years
+%\includeMATFourTwoOnetrue % MAT421 past years
+% Add MAT183 and MAT421 labels to the cover page if included
+\newcommand{\covercourselabel}{% 
+  \ifincludeMATOneEightThree
+    MAT183%
+  \fi
+  \ifincludeMATFourTwoOne
+    MAT421%
+  \fi
+}
+
 %-------------
 % To include scheme of works or not
 %-------------
 %\includesowtrue % Include scheme of works
 \includesowfalse % does not include scheme of works
-%----
 
 % format chapter title
 \usepackage{titlesec, color}
@@ -79,7 +95,6 @@
 % Disable indent on a new paragraph.
 \parindent 0px
 
-
 \title{Calculus I Workbook}
 \author{Profesor Madya Ts. Dr. Rizauddin Saian\\
 \url{https://www.rizauddin.com} | Room: B2-64 | Tel: 04-9882770
@@ -89,12 +104,56 @@
 \begin{document}
 
 %front page
-\includepdf[fitpaper=true, pages=-]{pdf/front20262}
+%\includepdf[fitpaper=true, pages=-]{pdf/front20262}
 %\includepdf[fitpaper=true, pages=-]{pdf/front20254}
 %\includepdf[fitpaper=true, pages=-]{pdf/front20252}
 %\includepdf[fitpaper=true, pages=-]{pdf/front20244}
 %\includepdf[fitpaper=true, pages=-]{pdf/front2024}
 %\includepdf[fitpaper=true, pages=-]{pdf/front}
+
+\newgeometry{margin=0pt}
+\thispagestyle{empty}
+\AddToShipoutPictureBG*{%
+  \AtPageLowerLeft{%
+    \includegraphics[width=\paperwidth,height=\paperheight]{pdf/front20262.jpg}%
+  }%
+  \begin{tikzpicture}[remember picture,overlay]
+    \ifincludeMATOneEightThree
+      % shadow
+      \node[
+        anchor=north east,
+        text=black!60,
+        font=\bfseries\fontsize{24}{26}\selectfont
+      ] at ([xshift=-0.92cm,yshift=-0.92cm]current page.north east) {\covercourselabel};
+
+      % main text
+      \node[
+        anchor=north east,
+        text=white,
+        font=\bfseries\fontsize{24}{26}\selectfont
+      ] at ([xshift=-1cm,yshift=-1cm]current page.north east) {\covercourselabel};
+    \fi
+
+    \ifincludeMATFourTwoOne
+      % shadow
+      \node[
+        anchor=north east,
+        text=black!60,
+        font=\bfseries\fontsize{24}{26}\selectfont
+      ] at ([xshift=-0.92cm,yshift=-0.92cm]current page.north east) {\covercourselabel};
+
+      % main text
+      \node[
+        anchor=north east,
+        text=white,
+        font=\bfseries\fontsize{24}{26}\selectfont
+      ] at ([xshift=-1cm,yshift=-1cm]current page.north east) {\covercourselabel};
+    \fi
+  \end{tikzpicture}%
+}
+\null
+\clearpage
+\restoregeometry
 
 \frontmatter
 
@@ -167,9 +226,18 @@
 
 \backmatter
 \appendix
-\ifincludepastyears
-  \input{past-years/past-years}
+%\ifincludepastyears
+%  \input{past-years/past-years}
+%\fi
+
+\ifincludeMATOneEightThree
+  \input{past-years/past-years-mat183}
 \fi
+
+\ifincludeMATFourTwoOne
+  \input{past-years/past-years-mat421}
+\fi
+
 \input{formulas/formulas}
 \input{cheat-sheets/cheat-sheets}
 
