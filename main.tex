@@ -66,7 +66,7 @@
 %-------------
 %\includeMATOneEightThreetrue % MAT183 past years
 %\includeMATFourTwoOnetrue % MAT421 past years
-% Add MAT183 and MAT421 labels to the cover page if included
+% Add MAT183 and MAT421 laels to the cover page if included
 \newcommand{\covercourselabel}{% 
   \ifincludeMATOneEightThree
     MAT183%
@@ -79,8 +79,8 @@
 %-------------
 % To include scheme of works or not
 %-------------
-%\includesowtrue % Include scheme of works
-\includesowfalse % does not include scheme of works
+\includesowtrue % Include scheme of works
+%\includesowfalse % does not include scheme of works
 
 % format chapter title
 \usepackage{titlesec, color}
@@ -115,13 +115,13 @@
 \thispagestyle{empty}
 \AddToShipoutPictureBG*{%
   \AtPageLowerLeft{%
-    \includegraphics[width=\paperwidth,height=\paperheight]{pdf/front20262.jpg}%
+    \includegraphics[width=\paperwidth,height=\paperheight]{pdf/front20264}%
   }%
   \begin{tikzpicture}[remember picture,overlay]
     \ifincludeMATOneEightThree
       % shadow
       \node[
-        anchor=north east,
+        anchor=north east, 
         text=black!60,
         font=\bfseries\fontsize{24}{26}\selectfont
       ] at ([xshift=-0.92cm,yshift=-0.92cm]current page.north east) {\covercourselabel};
@@ -161,9 +161,20 @@
 
 % scheme of works
 \ifincludesow
-	%\includepdf[pages={1-},pagecommand={}]{pdf/MAT183-20234-SOW}
-    \includepdf[scale=0.8,pages={1-},pagecommand={\chapter*{Scheme of Works}	\addcontentsline{toc}{chapter}{Scheme of Works}}]{sow/MAT183-SOW-20254}
-    %\includepdf[scale=0.8,pages={2-},pagecommand={}]{sow/MAT183-SOW-20252}
+\includepdf[%Page 1 of SOW. Add Chapter name Scheme of Works
+    scale=0.8,
+    pages=1,
+    pagecommand={
+        \chapter*{Scheme of Works}
+        \addcontentsline{toc}{chapter}{Scheme of Works}
+    }
+]{sow/MAT421-SOW-20264}
+
+\includepdf[%Page 2- of SOW
+    scale=0.9,
+    pages=2-,
+    pagecommand={}
+]{sow/MAT421-SOW-20264}
 \fi
 %-------------
 
